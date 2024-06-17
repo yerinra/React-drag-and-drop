@@ -30,4 +30,13 @@ module.exports = {
     new HtmlWebpackPlugin({ template: "./src/index.html" }),
     new MiniCssExtractPlugin(),
   ],
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    port: 3000,
+    compress: true,
+    hot: true,
+    open: true,
+  },
 };
