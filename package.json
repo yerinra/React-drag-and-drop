@@ -2,6 +2,10 @@
   "name": "react-beautiful-dnd",
   "version": "1.0.0",
   "description": "vertical list",
+  "scripts": {
+    "start": "webpack serve --open",
+    "build": "webpack --watch"
+  },
   "keywords": [
     "react",
     "drag drop",
