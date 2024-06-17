@@ -15,8 +15,11 @@ module.exports = {
       { test: /\.css$/, use: ["style-loader", "css-loader"] },
       { test: /\.(png|svg|jpg|jpeg|gif)$/i, type: "asset/resource" },
       {
-        test: /.m?js$/i,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
+        resolve: {
+          extensions: [".js", ".jsx"],
+        },
         use: {
           loader: "babel-loader",
           options: {
